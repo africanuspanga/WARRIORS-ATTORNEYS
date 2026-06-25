@@ -6,8 +6,11 @@ export default function ServicesPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="relative bg-navy pb-24 pt-40 text-white">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-navy pb-24 pt-40 text-white">
+        <div className="absolute inset-0 bg-grain opacity-50" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(195,145,28,0.12),transparent_42%)]" />
+        <div className="absolute -right-40 top-1/4 h-[420px] w-[420px] rounded-full border border-white/5" />
+        <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <div className="mb-4 flex items-center justify-center gap-3">
             <span className="h-px w-8 bg-gold" />
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
@@ -15,8 +18,11 @@ export default function ServicesPage() {
             </span>
             <span className="h-px w-8 bg-gold" />
           </div>
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-            Practice Areas & Professional Services
+          <h1 className="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl lg:leading-[1.1]">
+            Practice Areas &{" "}
+            <span className="font-display-italic text-gold">
+              Professional Services
+            </span>
           </h1>
           <p className="mt-6 text-lg text-slate-300">
             Structured around corporate transactions, regulatory compliance,

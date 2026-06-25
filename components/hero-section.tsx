@@ -18,7 +18,8 @@ export function HeroSection() {
           quality={90}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy/85 to-navy/70" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(195,145,28,0.12),transparent_40%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(195,145,28,0.14),transparent_42%)]" />
+        <div className="absolute inset-0 bg-grain opacity-60" />
       </div>
 
       {/* Decorative shapes */}
@@ -36,9 +37,11 @@ export function HeroSection() {
               </span>
             </div>
 
-            <h1 className="max-w-4xl text-5xl font-medium leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="max-w-4xl text-5xl font-medium leading-[1.02] tracking-[-0.02em] text-white sm:text-6xl md:text-7xl lg:text-8xl">
               Excellence in{" "}
-              <span className="text-gold">Legal Solutions</span>
+              <span className="font-display-italic text-gold">
+                Legal Solutions
+              </span>
             </h1>
 
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-slate-200 sm:text-xl">
@@ -61,7 +64,7 @@ export function HeroSection() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="h-14 border-white/25 bg-white/5 px-8 text-base font-medium text-white backdrop-blur-sm transition-all hover:border-gold hover:bg-gold/10 hover:text-white"
+                className="h-14 border-white/25 bg-white/5 px-8 text-base font-medium text-white transition-all hover:border-gold hover:bg-gold/10 hover:text-white"
               >
                 <Link href="/contact">Contact Us</Link>
               </Button>
@@ -84,7 +87,7 @@ export function HeroSection() {
 
           {/* Floating stats card */}
           <div className="hidden lg:col-span-4 lg:block">
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md">
+            <div className="rounded-3xl border border-white/10 bg-white/10 p-8">
               <div className="space-y-8">
                 <div>
                   <p className="text-5xl font-semibold text-gold">16</p>

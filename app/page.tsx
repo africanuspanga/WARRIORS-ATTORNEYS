@@ -74,8 +74,9 @@ export default function Home() {
                   About Us
                 </span>
               </div>
-              <h2 className="text-3xl font-semibold tracking-tight text-navy sm:text-4xl lg:text-5xl">
-                Practical Legal Partners for Growth
+              <h2 className="text-3xl font-medium tracking-[-0.01em] text-navy sm:text-4xl lg:text-5xl lg:leading-[1.08]">
+                Practical Legal Partners for{" "}
+                <span className="font-display-italic text-gold">Growth</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-slate-600">
                 Warriors Attorneys is a Tanzanian law firm providing practical,
@@ -106,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* Services Highlight */}
-      <section className="bg-slate-50 py-24 lg:py-32">
+      <section className="border-y border-ivory-200 bg-ivory-100 py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Practice Areas & Professional Services"
@@ -135,21 +136,22 @@ export default function Home() {
       <section className="py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading title="Why Choose Warriors Attorneys" subtitle="Why Us" />
-          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {whyUs.map((item) => (
               <div
                 key={item.number}
-                className="relative h-full rounded-2xl border border-slate-100 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
+                className="group relative h-full overflow-hidden rounded-2xl border border-ivory-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-gold/30 hover:shadow-[0_24px_50px_-20px_rgba(11,34,78,0.18)]"
               >
-                <span className="text-5xl font-bold text-navy-100">
+                <span className="font-heading text-5xl font-medium italic text-navy-100 transition-colors group-hover:text-gold/40">
                   {item.number}
                 </span>
-                <h3 className="mt-4 text-xl font-semibold text-navy">
+                <h3 className="mt-4 text-xl font-medium tracking-tight text-navy">
                   {item.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-slate-600">
                   {item.description}
                 </p>
+                <span className="absolute inset-x-0 bottom-0 h-px scale-x-0 bg-gradient-to-r from-gold/0 via-gold to-gold/0 transition-transform duration-500 group-hover:scale-x-100" />
               </div>
             ))}
           </div>
@@ -157,8 +159,10 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-navy py-24 text-white lg:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-navy py-24 text-white lg:py-32">
+        <div className="absolute inset-0 bg-grain opacity-50" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(195,145,28,0.10),transparent_45%)]" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="What Our Clients Say"
             subtitle="Testimonials"
@@ -180,8 +184,9 @@ export default function Home() {
       {/* Contact CTA */}
       <section className="py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-navy to-navy-900">
-            <div className="grid lg:grid-cols-2">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-navy to-navy-900 ring-1 ring-white/10">
+            <div className="absolute inset-0 bg-grain opacity-50" />
+            <div className="relative grid lg:grid-cols-2">
               <div className="p-8 sm:p-12 lg:p-16">
                 <div className="mb-4 flex items-center gap-3">
                   <span className="h-px w-8 bg-gold" />
@@ -189,8 +194,11 @@ export default function Home() {
                     Contact Us
                   </span>
                 </div>
-                <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                  Ready to Discuss Your Legal Needs?
+                <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl lg:leading-[1.12]">
+                  Ready to Discuss Your{" "}
+                  <span className="font-display-italic text-gold">
+                    Legal Needs?
+                  </span>
                 </h2>
                 <p className="mt-6 text-slate-300">
                   Get in touch with our team for practical, commercially focused

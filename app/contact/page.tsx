@@ -13,6 +13,7 @@ export default function ContactPage() {
     <>
       {/* Page Header */}
       <section className="relative overflow-hidden bg-navy pb-32 pt-40 text-white">
+        <div className="absolute inset-0 bg-grain opacity-50" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(195,145,28,0.12),transparent_40%)]" />
         <div className="absolute -right-40 top-1/3 h-[400px] w-[400px] rounded-full border border-white/5" />
         <div className="absolute -left-40 bottom-0 h-[500px] w-[500px] rounded-full border border-white/5" />
@@ -25,8 +26,9 @@ export default function ContactPage() {
             </span>
             <span className="h-px w-8 bg-gold" />
           </div>
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-            Get in Touch
+          <h1 className="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
+            Get in{" "}
+            <span className="font-display-italic text-gold">Touch</span>
           </h1>
           <p className="mt-6 text-lg text-slate-300">
             Reach out for practical, commercially focused legal advice tailored
@@ -156,9 +158,9 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-7">
-              <div className="h-full rounded-3xl border border-slate-100 bg-white p-8 shadow-xl sm:p-10">
+              <div className="h-full rounded-3xl border border-ivory-200 bg-white p-8 shadow-[0_30px_60px_-30px_rgba(11,34,78,0.25)] sm:p-10">
                 <div className="mb-8">
-                  <h2 className="text-2xl font-semibold text-navy">
+                  <h2 className="text-2xl font-medium tracking-tight text-navy">
                     Send a Message
                   </h2>
                   <p className="mt-2 text-slate-600">

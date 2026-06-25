@@ -33,7 +33,7 @@ export function SectionHeading({
         </span>
         {align === "center" && <span className="h-px w-8 bg-gold" />}
       </div>
-      <h2 className="text-3xl font-semibold tracking-tight text-navy sm:text-4xl lg:text-5xl">
+      <h2 className="text-3xl font-medium tracking-[-0.01em] text-navy sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
         {title}
       </h2>
     </div>

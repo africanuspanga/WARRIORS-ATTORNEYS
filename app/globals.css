@@ -9,7 +9,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-geist-sans);
+  --font-heading: var(--font-fraunces);
+
+  /* Warm editorial surfaces */
+  --color-ivory: #faf8f3;
+  --color-ivory-100: #f4eee2;
+  --color-ivory-200: #ece3d2;
 
   /* Brand colors */
   --color-navy: #0b224e;
@@ -67,8 +72,8 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
+  --background: #faf8f3;
+  --foreground: #14110b;
   --card: #ffffff;
   --card-foreground: #0f172a;
   --popover: #ffffff;
@@ -107,17 +112,36 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv01";
   }
   html {
     @apply font-sans scroll-smooth;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading tracking-tight;
+    font-optical-sizing: auto;
+    text-wrap: balance;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Editorial flourish: italic serif emphasis inside headings */
+  .font-display-italic {
+    font-family: var(--font-fraunces), serif;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  /* Subtle paper grain for premium depth on dark surfaces */
+  .bg-grain {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+    background-size: 4px 4px;
   }
 }

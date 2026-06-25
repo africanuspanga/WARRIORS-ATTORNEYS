@@ -17,7 +17,7 @@ export function ServiceCard({
     <article
       id={service.id}
       className={cn(
-        "group overflow-hidden rounded-2xl bg-white shadow-sm transition-all hover:shadow-lg",
+        "group overflow-hidden rounded-2xl border border-ivory-200 bg-white shadow-[0_1px_2px_rgba(11,34,78,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/30 hover:shadow-[0_24px_50px_-20px_rgba(11,34,78,0.22)]",
         className
       )}
     >
@@ -37,7 +37,7 @@ export function ServiceCard({
           <span className="text-xs font-medium uppercase tracking-wider text-gold-100">
             {service.category}
           </span>
-          <h3 className="mt-1 text-xl font-semibold text-white">
+          <h3 className="mt-1 text-xl font-medium tracking-tight text-white">
             {service.title}
           </h3>
         </div>
