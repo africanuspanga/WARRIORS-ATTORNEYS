@@ -35,14 +35,22 @@ export function Navbar() {
         <nav className="flex h-20 items-center justify-between lg:h-24">
           <Link
             href="/"
-            className="flex h-14 w-14 items-center justify-center rounded-xl bg-white shadow-sm lg:h-16 lg:w-16"
+            className={cn(
+              "flex items-center justify-center rounded-xl transition-all duration-300",
+              scrolled
+                ? "h-14 w-14 bg-white shadow-sm lg:h-16 lg:w-16"
+                : "h-14 w-14 lg:h-16 lg:w-16"
+            )}
           >
             <Image
               src="/logo.png"
               alt="Warriors Attorneys"
               width={64}
               height={64}
-              className="h-11 w-auto lg:h-12"
+              className={cn(
+                "h-11 w-auto lg:h-12",
+                !scrolled && "drop-shadow-[0_0_12px_rgba(255,255,255,0.6)]"
+              )}
               priority
             />
           </Link>
