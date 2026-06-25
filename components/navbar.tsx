@@ -37,7 +37,7 @@ export function Navbar() {
             href="/"
             className={cn(
               "flex items-center justify-center rounded-xl transition-all duration-300",
-              scrolled
+              !scrolled
                 ? "h-14 w-14 bg-white shadow-sm lg:h-16 lg:w-16"
                 : "h-14 w-14 lg:h-16 lg:w-16"
             )}
@@ -47,10 +47,7 @@ export function Navbar() {
               alt="Warriors Attorneys"
               width={64}
               height={64}
-              className={cn(
-                "h-11 w-auto lg:h-12",
-                !scrolled && "drop-shadow-[0_0_12px_rgba(255,255,255,0.6)]"
-              )}
+              className="h-11 w-auto lg:h-12"
               priority
             />
           </Link>
