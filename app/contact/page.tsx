@@ -1,7 +1,6 @@
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ContactForm } from "@/components/contact-form";
-import { MotionWrapper } from "@/components/motion-wrapper";
 import { contactInfo } from "@/lib/data";
 
 export default function ContactPage() {
@@ -18,25 +17,21 @@ export default function ContactPage() {
         <div className="absolute -right-40 top-1/3 h-[400px] w-[400px] rounded-full border border-white/5" />
         <div className="absolute -left-40 bottom-0 h-[500px] w-[500px] rounded-full border border-white/5" />
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <MotionWrapper>
-            <div className="mx-auto max-w-3xl text-center">
-              <div className="mb-4 flex items-center justify-center gap-3">
-                <span className="h-px w-8 bg-gold" />
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-                  Contact Us
-                </span>
-                <span className="h-px w-8 bg-gold" />
-              </div>
-              <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-                Get in Touch
-              </h1>
-              <p className="mt-6 text-lg text-slate-300">
-                Reach out for practical, commercially focused legal advice
-                tailored to your needs.
-              </p>
-            </div>
-          </MotionWrapper>
+        <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+          <div className="mb-4 flex items-center justify-center gap-3">
+            <span className="h-px w-8 bg-gold" />
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+              Contact Us
+            </span>
+            <span className="h-px w-8 bg-gold" />
+          </div>
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+            Get in Touch
+          </h1>
+          <p className="mt-6 text-lg text-slate-300">
+            Reach out for practical, commercially focused legal advice tailored
+            to your needs.
+          </p>
         </div>
       </section>
 
@@ -45,7 +40,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-12">
             {/* Contact Info Card */}
-            <MotionWrapper className="lg:col-span-5">
+            <div className="lg:col-span-5">
               <div className="h-full rounded-3xl bg-navy p-8 text-white shadow-xl sm:p-10">
                 <h2 className="text-2xl font-semibold">Contact Details</h2>
                 <p className="mt-2 text-slate-300">
@@ -157,10 +152,10 @@ export default function ContactPage() {
                   </Button>
                 </div>
               </div>
-            </MotionWrapper>
+            </div>
 
             {/* Contact Form */}
-            <MotionWrapper className="lg:col-span-7" delay={0.15}>
+            <div className="lg:col-span-7">
               <div className="h-full rounded-3xl border border-slate-100 bg-white p-8 shadow-xl sm:p-10">
                 <div className="mb-8">
                   <h2 className="text-2xl font-semibold text-navy">
@@ -172,7 +167,7 @@ export default function ContactPage() {
                 </div>
                 <ContactForm />
               </div>
-            </MotionWrapper>
+            </div>
           </div>
         </div>
       </section>

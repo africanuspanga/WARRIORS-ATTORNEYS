@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { SectionHeading } from "@/components/section-heading";
-import { MotionWrapper } from "@/components/motion-wrapper";
 import { CTASection } from "@/components/cta-section";
 
 const values = [
@@ -31,25 +30,20 @@ export default function AboutPage() {
     <>
       {/* Page Header */}
       <section className="relative bg-navy pb-24 pt-40 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <MotionWrapper>
-            <div className="mx-auto max-w-3xl text-center">
-              <div className="mb-4 flex items-center justify-center gap-3">
-                <span className="h-px w-8 bg-gold" />
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-                  About Us
-                </span>
-                <span className="h-px w-8 bg-gold" />
-              </div>
-              <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-                About Warriors Attorneys
-              </h1>
-              <p className="mt-6 text-lg text-slate-300">
-                Committed to excellence, integrity, and practical legal
-                solutions.
-              </p>
-            </div>
-          </MotionWrapper>
+        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+          <div className="mb-4 flex items-center justify-center gap-3">
+            <span className="h-px w-8 bg-gold" />
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+              About Us
+            </span>
+            <span className="h-px w-8 bg-gold" />
+          </div>
+          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+            About Warriors Attorneys
+          </h1>
+          <p className="mt-6 text-lg text-slate-300">
+            Committed to excellence, integrity, and practical legal solutions.
+          </p>
         </div>
       </section>
 
@@ -57,41 +51,37 @@ export default function AboutPage() {
       <section className="py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-            <MotionWrapper>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                <Image
-                  src="/about-us.jpg"
-                  alt="Warriors Attorneys"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </MotionWrapper>
-            <MotionWrapper delay={0.15}>
-              <div>
-                <h2 className="text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
-                  A Modern Tanzanian Law Firm
-                </h2>
-                <p className="mt-6 text-base leading-relaxed text-slate-600">
-                  Warriors Attorneys is a Tanzanian law firm providing
-                  practical, commercially focused legal solutions to
-                  corporations, financial institutions, investors,
-                  entrepreneurs, government entities, and private clients.
-                </p>
-                <p className="mt-4 text-base leading-relaxed text-slate-600">
-                  Our practice is structured around corporate transactions,
-                  regulatory compliance, dispute resolution, property, and
-                  specialized regulated sectors. We serve clients at every stage
-                  of the business lifecycle, from incorporation and licensing to
-                  complex transactions, compliance, and dispute resolution.
-                </p>
-                <p className="mt-4 text-base leading-relaxed text-slate-600">
-                  We believe that great legal counsel should be clear,
-                  accessible, and aligned with commercial reality. That is the
-                  standard we bring to every engagement.
-                </p>
-              </div>
-            </MotionWrapper>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image
+                src="/about-us.jpg"
+                alt="Warriors Attorneys"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
+                A Modern Tanzanian Law Firm
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-slate-600">
+                Warriors Attorneys is a Tanzanian law firm providing practical,
+                commercially focused legal solutions to corporations, financial
+                institutions, investors, entrepreneurs, government entities, and
+                private clients.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-slate-600">
+                Our practice is structured around corporate transactions,
+                regulatory compliance, dispute resolution, property, and
+                specialized regulated sectors. We serve clients at every stage of
+                the business lifecycle, from incorporation and licensing to
+                complex transactions, compliance, and dispute resolution.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-slate-600">
+                We believe that great legal counsel should be clear, accessible,
+                and aligned with commercial reality. That is the standard we bring
+                to every engagement.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -99,22 +89,19 @@ export default function AboutPage() {
       {/* Values */}
       <section className="bg-slate-50 py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <MotionWrapper>
-            <SectionHeading title="Our Values" subtitle="What Drives Us" />
-          </MotionWrapper>
+          <SectionHeading title="Our Values" subtitle="What Drives Us" />
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {values.map((value, index) => (
-              <MotionWrapper key={value.title} delay={index * 0.1}>
-                <div className="h-full rounded-2xl bg-white p-8 shadow-sm transition-shadow hover:shadow-md">
-                  <h3 className="text-xl font-semibold text-navy">
-                    {value.title}
-                  </h3>
-                  <div className="my-4 h-px w-12 bg-gold" />
-                  <p className="text-sm leading-relaxed text-slate-600">
-                    {value.description}
-                  </p>
-                </div>
-              </MotionWrapper>
+            {values.map((value) => (
+              <div
+                key={value.title}
+                className="h-full rounded-2xl bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
+              >
+                <h3 className="text-xl font-semibold text-navy">{value.title}</h3>
+                <div className="my-4 h-px w-12 bg-gold" />
+                <p className="text-sm leading-relaxed text-slate-600">
+                  {value.description}
+                </p>
+              </div>
             ))}
           </div>
         </div>
@@ -124,7 +111,7 @@ export default function AboutPage() {
       <section className="py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
-            <MotionWrapper>
+            <div>
               <h2 className="text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
                 Our Approach
               </h2>
@@ -138,21 +125,19 @@ export default function AboutPage() {
               <p className="mt-4 text-base leading-relaxed text-slate-600">
                 We combine specialist knowledge across corporate law, finance,
                 property, energy, tourism, gaming, tax, intellectual property,
-                employment, and disputes with a collaborative, partner-led
-                service model. The result is responsive, high-quality counsel
-                tailored to Tanzania&apos;s legal and regulatory environment.
+                employment, and disputes with a collaborative, partner-led service
+                model. The result is responsive, high-quality counsel tailored to
+                Tanzania&apos;s legal and regulatory environment.
               </p>
-            </MotionWrapper>
-            <MotionWrapper delay={0.15}>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                <Image
-                  src="/legal-research-advisory.jpg"
-                  alt="Legal research and advisory"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </MotionWrapper>
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <Image
+                src="/legal-research-advisory.jpg"
+                alt="Legal research and advisory"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>

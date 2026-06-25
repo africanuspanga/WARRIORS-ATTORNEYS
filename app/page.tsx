@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceCard } from "@/components/service-card";
 import { TestimonialCard } from "@/components/testimonial-card";
-import { MotionWrapper } from "@/components/motion-wrapper";
 import { HeroSection } from "@/components/hero-section";
 import { services, testimonials, contactInfo } from "@/lib/data";
 
@@ -54,59 +53,54 @@ export default function Home() {
       <section className="py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-            <MotionWrapper>
-              <div className="relative">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                  <Image
-                    src="/about-us.jpg"
-                    alt="Warriors Attorneys office"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-6 -right-6 hidden rounded-2xl bg-gold p-8 text-white lg:block">
-                  <p className="text-4xl font-bold">15+</p>
-                  <p className="text-sm opacity-90">Practice Areas</p>
-                </div>
+            <div className="relative">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                <Image
+                  src="/about-us.jpg"
+                  alt="Warriors Attorneys office"
+                  fill
+                  className="object-cover"
+                />
               </div>
-            </MotionWrapper>
-            <MotionWrapper delay={0.15}>
-              <div className="flex flex-col items-start">
-                <div className="mb-4 flex items-center gap-3">
-                  <span className="h-px w-8 bg-gold" />
-                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-                    About Us
-                  </span>
-                </div>
-                <h2 className="text-3xl font-semibold tracking-tight text-navy sm:text-4xl lg:text-5xl">
-                  Practical Legal Partners for Growth
-                </h2>
-                <p className="mt-6 text-base leading-relaxed text-slate-600">
-                  Warriors Attorneys is a Tanzanian law firm providing
-                  practical, commercially focused legal solutions to
-                  corporations, financial institutions, investors,
-                  entrepreneurs, government entities, and private clients. Our
-                  practice is structured around corporate transactions,
-                  regulatory compliance, dispute resolution, property, and
-                  specialized regulated sectors.
-                </p>
-                <p className="mt-4 text-base leading-relaxed text-slate-600">
-                  We combine deep local knowledge with a clear understanding of
-                  commercial realities, helping clients move forward with
-                  confidence.
-                </p>
-                <Button
-                  asChild
-                  variant="outline"
-                  className="mt-8 border-navy text-navy hover:bg-navy hover:text-white"
-                >
-                  <Link href="/about">
-                    Learn More About Us
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
+              <div className="absolute -bottom-6 -right-6 hidden rounded-2xl bg-gold p-8 text-white lg:block">
+                <p className="text-4xl font-bold">15+</p>
+                <p className="text-sm opacity-90">Practice Areas</p>
               </div>
-            </MotionWrapper>
+            </div>
+            <div className="flex flex-col items-start">
+              <div className="mb-4 flex items-center gap-3">
+                <span className="h-px w-8 bg-gold" />
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                  About Us
+                </span>
+              </div>
+              <h2 className="text-3xl font-semibold tracking-tight text-navy sm:text-4xl lg:text-5xl">
+                Practical Legal Partners for Growth
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-slate-600">
+                Warriors Attorneys is a Tanzanian law firm providing practical,
+                commercially focused legal solutions to corporations, financial
+                institutions, investors, entrepreneurs, government entities, and
+                private clients. Our practice is structured around corporate
+                transactions, regulatory compliance, dispute resolution,
+                property, and specialized regulated sectors.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-slate-600">
+                We combine deep local knowledge with a clear understanding of
+                commercial realities, helping clients move forward with
+                confidence.
+              </p>
+              <Button
+                asChild
+                variant="outline"
+                className="mt-8 border-navy text-navy hover:bg-navy hover:text-white"
+              >
+                <Link href="/about">
+                  Learn More About Us
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -114,17 +108,13 @@ export default function Home() {
       {/* Services Highlight */}
       <section className="bg-slate-50 py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <MotionWrapper>
-            <SectionHeading
-              title="Practice Areas & Professional Services"
-              subtitle="What We Do"
-            />
-          </MotionWrapper>
+          <SectionHeading
+            title="Practice Areas & Professional Services"
+            subtitle="What We Do"
+          />
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredServices.map((service, index) => (
-              <MotionWrapper key={service.id} delay={index * 0.08}>
-                <ServiceCard service={service} />
-              </MotionWrapper>
+            {featuredServices.map((service) => (
+              <ServiceCard key={service.id} service={service} />
             ))}
           </div>
           <div className="mt-12 text-center">
@@ -144,24 +134,23 @@ export default function Home() {
       {/* Why Us */}
       <section className="py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <MotionWrapper>
-            <SectionHeading title="Why Choose Warriors Attorneys" subtitle="Why Us" />
-          </MotionWrapper>
+          <SectionHeading title="Why Choose Warriors Attorneys" subtitle="Why Us" />
           <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {whyUs.map((item, index) => (
-              <MotionWrapper key={item.number} delay={index * 0.1}>
-                <div className="relative h-full rounded-2xl border border-slate-100 bg-white p-8 shadow-sm transition-shadow hover:shadow-md">
-                  <span className="text-5xl font-bold text-navy-100">
-                    {item.number}
-                  </span>
-                  <h3 className="mt-4 text-xl font-semibold text-navy">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                    {item.description}
-                  </p>
-                </div>
-              </MotionWrapper>
+            {whyUs.map((item) => (
+              <div
+                key={item.number}
+                className="relative h-full rounded-2xl border border-slate-100 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
+              >
+                <span className="text-5xl font-bold text-navy-100">
+                  {item.number}
+                </span>
+                <h3 className="mt-4 text-xl font-semibold text-navy">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                  {item.description}
+                </p>
+              </div>
             ))}
           </div>
         </div>
@@ -170,22 +159,19 @@ export default function Home() {
       {/* Testimonials */}
       <section className="bg-navy py-24 text-white lg:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <MotionWrapper>
-            <SectionHeading
-              title="What Our Clients Say"
-              subtitle="Testimonials"
-              className="[&_h2]:text-white"
-            />
-          </MotionWrapper>
+          <SectionHeading
+            title="What Our Clients Say"
+            subtitle="Testimonials"
+            className="[&_h2]:text-white"
+          />
           <div className="mt-16 grid gap-6 lg:grid-cols-3">
-            {testimonials.map((testimonial, index) => (
-              <MotionWrapper key={testimonial.name} delay={index * 0.1}>
-                <TestimonialCard
-                  quote={testimonial.quote}
-                  name={testimonial.name}
-                  role={testimonial.role}
-                />
-              </MotionWrapper>
+            {testimonials.map((testimonial) => (
+              <TestimonialCard
+                key={testimonial.name}
+                quote={testimonial.quote}
+                name={testimonial.name}
+                role={testimonial.role}
+              />
             ))}
           </div>
         </div>
