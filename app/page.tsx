@@ -1,65 +1,257 @@
+import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight, Phone, Mail, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { SectionHeading } from "@/components/section-heading";
+import { ServiceCard } from "@/components/service-card";
+import { TestimonialCard } from "@/components/testimonial-card";
+import { MotionWrapper } from "@/components/motion-wrapper";
+import { HeroSection } from "@/components/hero-section";
+import { services, testimonials, contactInfo } from "@/lib/data";
+
+const featuredServices = [
+  services[0],
+  services[1],
+  services[3],
+  services[5],
+  services[7],
+  services[13],
+];
+
+const whyUs = [
+  {
+    number: "01",
+    title: "Tanzanian Expertise",
+    description:
+      "Deep understanding of local law, regulators, and business culture, delivered with international standards.",
+  },
+  {
+    number: "02",
+    title: "Commercially Focused",
+    description:
+      "We translate complex legal issues into practical, business-oriented solutions that protect your interests.",
+  },
+  {
+    number: "03",
+    title: "Sector Specialists",
+    description:
+      "Dedicated experience across finance, energy, tourism, gaming, property, and regulated industries.",
+  },
+  {
+    number: "04",
+    title: "Relationship Driven",
+    description:
+      "Responsive, accessible, and committed to building long-term partnerships with every client.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <HeroSection />
+
+      {/* About Snippet */}
+      <section className="py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+            <MotionWrapper>
+              <div className="relative">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                  <Image
+                    src="/about-us.jpg"
+                    alt="Warriors Attorneys office"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-6 -right-6 hidden rounded-2xl bg-gold p-8 text-white lg:block">
+                  <p className="text-4xl font-bold">15+</p>
+                  <p className="text-sm opacity-90">Practice Areas</p>
+                </div>
+              </div>
+            </MotionWrapper>
+            <MotionWrapper delay={0.15}>
+              <div className="flex flex-col items-start">
+                <div className="mb-4 flex items-center gap-3">
+                  <span className="h-px w-8 bg-gold" />
+                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                    About Us
+                  </span>
+                </div>
+                <h2 className="text-3xl font-semibold tracking-tight text-navy sm:text-4xl lg:text-5xl">
+                  Practical Legal Partners for Growth
+                </h2>
+                <p className="mt-6 text-base leading-relaxed text-slate-600">
+                  Warriors Attorneys is a Tanzanian law firm providing
+                  practical, commercially focused legal solutions to
+                  corporations, financial institutions, investors,
+                  entrepreneurs, government entities, and private clients. Our
+                  practice is structured around corporate transactions,
+                  regulatory compliance, dispute resolution, property, and
+                  specialized regulated sectors.
+                </p>
+                <p className="mt-4 text-base leading-relaxed text-slate-600">
+                  We combine deep local knowledge with a clear understanding of
+                  commercial realities, helping clients move forward with
+                  confidence.
+                </p>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="mt-8 border-navy text-navy hover:bg-navy hover:text-white"
+                >
+                  <Link href="/about">
+                    Learn More About Us
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </MotionWrapper>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+      </section>
+
+      {/* Services Highlight */}
+      <section className="bg-slate-50 py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <MotionWrapper>
+            <SectionHeading
+              title="Practice Areas & Professional Services"
+              subtitle="What We Do"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </MotionWrapper>
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredServices.map((service, index) => (
+              <MotionWrapper key={service.id} delay={index * 0.08}>
+                <ServiceCard service={service} />
+              </MotionWrapper>
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Button
+              asChild
+              className="bg-navy px-8 text-white hover:bg-navy-800"
+            >
+              <Link href="/services">
+                View All Services
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Why Us */}
+      <section className="py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <MotionWrapper>
+            <SectionHeading title="Why Choose Warriors Attorneys" subtitle="Why Us" />
+          </MotionWrapper>
+          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {whyUs.map((item, index) => (
+              <MotionWrapper key={item.number} delay={index * 0.1}>
+                <div className="relative h-full rounded-2xl border border-slate-100 bg-white p-8 shadow-sm transition-shadow hover:shadow-md">
+                  <span className="text-5xl font-bold text-navy-100">
+                    {item.number}
+                  </span>
+                  <h3 className="mt-4 text-xl font-semibold text-navy">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                    {item.description}
+                  </p>
+                </div>
+              </MotionWrapper>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="bg-navy py-24 text-white lg:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <MotionWrapper>
+            <SectionHeading
+              title="What Our Clients Say"
+              subtitle="Testimonials"
+              className="[&_h2]:text-white"
+            />
+          </MotionWrapper>
+          <div className="mt-16 grid gap-6 lg:grid-cols-3">
+            {testimonials.map((testimonial, index) => (
+              <MotionWrapper key={testimonial.name} delay={index * 0.1}>
+                <TestimonialCard
+                  quote={testimonial.quote}
+                  name={testimonial.name}
+                  role={testimonial.role}
+                />
+              </MotionWrapper>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-navy to-navy-900">
+            <div className="grid lg:grid-cols-2">
+              <div className="p-8 sm:p-12 lg:p-16">
+                <div className="mb-4 flex items-center gap-3">
+                  <span className="h-px w-8 bg-gold" />
+                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                    Contact Us
+                  </span>
+                </div>
+                <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                  Ready to Discuss Your Legal Needs?
+                </h2>
+                <p className="mt-6 text-slate-300">
+                  Get in touch with our team for practical, commercially focused
+                  legal advice.
+                </p>
+                <div className="mt-8 space-y-4">
+                  {contactInfo.phones.map((phone) => (
+                    <a
+                      key={phone}
+                      href={`tel:${phone.replace(/\s/g, "")}`}
+                      className="flex items-center gap-3 text-slate-200 transition-colors hover:text-gold"
+                    >
+                      <Phone className="h-5 w-5 text-gold" />
+                      {phone}
+                    </a>
+                  ))}
+                  <a
+                    href={`mailto:${contactInfo.emails[0]}`}
+                    className="flex items-center gap-3 text-slate-200 transition-colors hover:text-gold"
+                  >
+                    <Mail className="h-5 w-5 text-gold" />
+                    {contactInfo.emails[0]}
+                  </a>
+                  <p className="flex items-start gap-3 text-slate-200">
+                    <MapPin className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold" />
+                    {contactInfo.location}
+                  </p>
+                </div>
+                <Button
+                  asChild
+                  className="mt-10 bg-gold px-8 text-white hover:bg-gold-600"
+                >
+                  <Link href="/contact">Start a Conversation</Link>
+                </Button>
+              </div>
+              <div className="relative hidden min-h-[320px] lg:block">
+                <Image
+                  src="/corporate-commercial-law.jpg"
+                  alt="Warriors Attorneys team"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
