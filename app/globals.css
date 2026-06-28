@@ -16,13 +16,15 @@
   --color-ivory-100: #f4eee2;
   --color-ivory-200: #ece3d2;
 
-  /* Brand colors */
-  --color-navy: #0b224e;
-  --color-navy-50: #f1f5fb;
-  --color-navy-100: #dce6f4;
-  --color-navy-200: #bdcee9;
-  --color-navy-800: #0a1d42;
-  --color-navy-900: #061328;
+  /* Brand colors — #162853 is the firm's signature navy and the dominant colour */
+  --color-navy: #162853;
+  --color-navy-50: #eef1f8;
+  --color-navy-100: #d6deee;
+  --color-navy-200: #aebbdb;
+  --color-navy-600: #1d3268;
+  --color-navy-700: #18294f;
+  --color-navy-800: #111f3e;
+  --color-navy-900: #0b1530;
   --color-gold: #c3911c;
   --color-gold-50: #fbf8ee;
   --color-gold-100: #f5ecd2;
@@ -78,10 +80,10 @@
   --card-foreground: #0f172a;
   --popover: #ffffff;
   --popover-foreground: #0f172a;
-  --primary: #0b224e;
+  --primary: #162853;
   --primary-foreground: #ffffff;
   --secondary: #f8fafc;
-  --secondary-foreground: #0b224e;
+  --secondary-foreground: #162853;
   --muted: #f1f5f9;
   --muted-foreground: #64748b;
   --accent: #c3911c;
@@ -90,7 +92,7 @@
   --border: #e2e8f0;
   --input: #e2e8f0;
   --ring: #c3911c;
-  --chart-1: #0b224e;
+  --chart-1: #162853;
   --chart-2: #007fd1;
   --chart-3: #c3911c;
   --chart-4: #475569;
@@ -98,10 +100,10 @@
   --radius: 0.75rem;
   --sidebar: #f8fafc;
   --sidebar-foreground: #0f172a;
-  --sidebar-primary: #0b224e;
+  --sidebar-primary: #162853;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #f1f5f9;
-  --sidebar-accent-foreground: #0b224e;
+  --sidebar-accent-foreground: #162853;
   --sidebar-border: #e2e8f0;
   --sidebar-ring: #c3911c;
 }

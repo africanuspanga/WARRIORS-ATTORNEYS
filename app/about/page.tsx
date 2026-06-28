@@ -1,6 +1,20 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { SectionHeading } from "@/components/section-heading";
 import { CTASection } from "@/components/cta-section";
+
+export const metadata: Metadata = {
+  title: "About the Firm",
+  description:
+    "Learn about Warriors Attorneys — a Tanzanian law firm of advocates, corporate advisors, and compliance consultants committed to excellence, integrity, and practical legal solutions for clients across Tanzania.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About the Firm | Warriors Attorneys",
+    description:
+      "Advocates, corporate advisors, and compliance consultants delivering practical legal solutions across Tanzania.",
+    url: "/about",
+  },
+};
 
 const values = [
   {

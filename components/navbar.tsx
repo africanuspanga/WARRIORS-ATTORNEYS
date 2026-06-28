@@ -32,22 +32,23 @@ export function Navbar() {
       )}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <nav className="flex h-20 items-center justify-between lg:h-24">
+        <nav className="flex h-24 items-center justify-between lg:h-28">
           <Link
             href="/"
+            aria-label="Warriors Attorneys — Home"
             className={cn(
-              "flex items-center justify-center rounded-xl transition-all duration-300",
+              "flex items-center justify-center rounded-2xl p-1.5 transition-all duration-300",
               !scrolled
-                ? "h-14 w-14 bg-white shadow-sm lg:h-16 lg:w-16"
-                : "h-14 w-14 lg:h-16 lg:w-16"
+                ? "h-18 w-18 bg-white shadow-md lg:h-22 lg:w-22"
+                : "h-18 w-18 lg:h-22 lg:w-22"
             )}
           >
             <Image
               src="/logo.png"
-              alt="Warriors Attorneys"
-              width={64}
-              height={64}
-              className="h-11 w-auto lg:h-12"
+              alt="Warriors Attorneys logo"
+              width={96}
+              height={96}
+              className="h-15 w-auto lg:h-19"
               priority
             />
           </Link>
@@ -105,14 +106,15 @@ export function Navbar() {
                 <div className="flex items-center justify-between pb-8">
                   <Link
                     href="/"
-                    className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy"
+                    aria-label="Warriors Attorneys — Home"
+                    className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white p-1.5 shadow-sm ring-1 ring-slate-100"
                   >
                     <Image
                       src="/logo.png"
-                      alt="Warriors Attorneys"
-                      width={48}
-                      height={48}
-                      className="h-9 w-auto"
+                      alt="Warriors Attorneys logo"
+                      width={64}
+                      height={64}
+                      className="h-13 w-auto"
                     />
                   </Link>
                 </div>

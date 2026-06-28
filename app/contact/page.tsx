@@ -1,7 +1,21 @@
+import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ContactForm } from "@/components/contact-form";
 import { contactInfo } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with Warriors Attorneys in Dar es Salaam, Tanzania. Call, email, WhatsApp, or Telegram us to discuss your corporate, commercial, or regulatory legal needs.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact Us | Warriors Attorneys",
+    description:
+      "Reach Warriors Attorneys in Dar es Salaam by phone, email, WhatsApp, or Telegram.",
+    url: "/contact",
+  },
+};
 
 export default function ContactPage() {
   const message = encodeURIComponent(

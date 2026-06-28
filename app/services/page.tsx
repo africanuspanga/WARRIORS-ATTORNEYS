@@ -1,6 +1,20 @@
+import type { Metadata } from "next";
 import { services } from "@/lib/data";
 import { ServiceCard } from "@/components/service-card";
 import { CTASection } from "@/components/cta-section";
+
+export const metadata: Metadata = {
+  title: "Legal Services & Practice Areas",
+  description:
+    "Explore Warriors Attorneys' full range of legal services in Tanzania — corporate & commercial law, banking & finance, mergers & acquisitions, land & conveyancing, litigation & arbitration, tax, intellectual property, and regulatory compliance.",
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Legal Services & Practice Areas | Warriors Attorneys",
+    description:
+      "A full-service Tanzanian law firm covering corporate, commercial, finance, disputes, and regulatory compliance.",
+    url: "/services",
+  },
+};
 
 export default function ServicesPage() {
   return (
